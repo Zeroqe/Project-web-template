@@ -1,70 +1,71 @@
-# Web Layout Starter Template (Vite + SCSS)
+# Vite + SCSS Web Starter Template
 
-A clean, lightweight front-end starter template powered by **Vite** and **Sass (SCSS)**. Designed for rapid, scalable web layout development with a pre-configured build pipeline and utility functions.
+A clean, lightweight boilerplate for responsive multi-page websites powered by **Vite** and **Sass (SCSS)**.
 
-## Tech Stack
-- **Build Tool:** Vite
-- **Styling:** Sass / SCSS (with custom `px` to `rem` conversion helper)
-- **Markup & Scripting:** HTML5, Modern JavaScript (ES Modules)
+## Project Structure
 
----
+```text
+├── src/
+│   ├── font/                  # Local web fonts
+│   ├── img/                   # Images and raster assets
+│   ├── js/
+│   │   └── script.js          # Main JavaScript entry point
+│   ├── logo/                  # Brand logos and SVG assets
+│   └── sass/
+│       ├── modern-normalize.min.css
+│       ├── pxtorem.scss       # Custom px-to-rem conversion function
+│       └── style.scss         # Main stylesheet
+├── .gitignore
+├── index.html                 # Main HTML entry point
+├── package.json
+├── package-lock.json
+└── vite.config.js             # Vite & Rollup multi-page configuration
+```
 
-## 1. Getting Started
+## Getting Started
 
-1. Click **Use this template** ➔ **Create a new repository** on GitHub to initialize a fresh project without commit history.
+1. Click **Use this template** → **Create a new repository** on GitHub.
 2. Clone your new repository and install dependencies:
-```bash
-git clone https://github.com/Zeroqe/your-project-name.git
-cd your-project-name
-npm i
-```
-3. Start the local development server with Hot Module Replacement (HMR):
-```bash
-npm run dev
-```
+   ```bash
+   git clone [https://github.com/Zeroqe/](https://github.com/Zeroqe/)<your-repo-name>.git
+   cd <your-repo-name>
+   npm i
+   ```
+3. Start the local development server:
+   ```bash
+   npm run dev
+   ```
 
----
+## Available Scripts
 
-## 2. Dependency Management & Updates
+| Command           | Description                                                    |
+| :---------------- | :------------------------------------------------------------- |
+| `npm run dev`     | Starts the Vite dev server with Hot Module Replacement (HMR)   |
+| `npm run build`   | Compiles and bundles production assets into the `dist/` folder |
+| `npm run preview` | Locally previews the production build from `dist/`             |
 
-Check for outdated packages in the project:
+## Dependency Maintenance
+
+Check for outdated packages:
+
 ```bash
 npm outdated
 ```
 
 Update **Vite** to the latest version:
+
 ```bash
 npm i -D vite@latest
 ```
 
-Update **all dependencies** in `package.json` to their latest versions (including major releases):
+Update **all dependencies** in `package.json` (including major versions):
+
 ```bash
 npx npm-check-updates -u
 npm i
 ```
-*(After updating, verify the build via `npm run dev` and commit the updated `package.json` and `package-lock.json` files).*
 
----
+## Built-in Helpers
 
-## 3. Production Build & Git Workflow
-
-Build optimized production-ready assets into the `dist/` directory:
-```bash
-npm run build
-```
-
-Stage, commit, and push changes to GitHub:
-```bash
-git add .
-git commit -m "feat: describe your changes"
-git push
-```
-
----
-
-## 4. Architecture & Built-in Utilities
-
-- **`px` to `rem` Conversion (`src/sass/pxtorem.scss`):**
-  Import the helper at the top of any `.scss` file using `@use "pxtorem" as *;` and pass unitless pixel values to the `rem()` function (e.g., `font-size: rem(18);` compiles to `1.125rem`).
-- **Multi-Page Setup (`vite.config.js`):**
-  To include additional HTML pages (e.g., `about.html`) in the production bundle, register them inside the `build.rollupOptions.input` object in `vite.config.js`.
+- **`px` to `rem` conversion:** Import the helper at the top of any `.scss` file with `@use "pxtorem" as *;` and pass unitless pixel values (e.g., `font-size: rem(18);`).
+- **Multi-page builds:** When adding new HTML pages (e.g., `about.html`), register them inside `build.rollupOptions.input` in `vite.config.js`.
