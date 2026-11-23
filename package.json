@@ -1,15 +1,17 @@
 {
-  "name": "ceramic_soul",
+  "name": "project-web-template",
   "version": "1.0.0",
   "description": "",
-  "main": "vite.config.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.84.0",
-    "vite": "^6.1.0"
+    "sass": "^1.108.2",
+    "vite": "^8.3.8"
   }
 }
