@@ -12,7 +12,10 @@ A clean, lightweight boilerplate for responsive multi-page websites powered by *
 │   │   └── script.js          # Main JavaScript entry point
 │   ├── logo/                  # Brand logos and SVG assets
 │   └── sass/
-│       ├── modern-normalize.min.css
+│       ├── base/              # Global variables, mixins, and base styles
+│       ├── blocks/            # Component and section styles
+│       ├── libs/
+│       │   └── modern-normalize.min.css
 │       ├── pxtorem.scss       # Custom px-to-rem conversion function
 │       └── style.scss         # Main stylesheet
 ├── .gitignore
